@@ -6,11 +6,11 @@ The Client can directly call the HTTP Services exposed on a Server by sending HT
 
 ## Projects
 
-### 1. Course
+### 1. [Course](https://github.com/rgautam320/Spring-Boot-Projects/tree/master/course)
 
 This has just one class `Course` where multiple operations are being performed. Normal CRUD operations are there.
 
-### 2. Wallet
+### 2. [Wallet](https://github.com/rgautam320/Spring-Boot-Projects/tree/master/wallet)
 
 This can be used for expense tracking. Multiple users can register and create their own category as well. Once categories are created, transactions can be created.
 
