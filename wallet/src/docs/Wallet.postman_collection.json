@@ -1,0 +1,986 @@
+{
+	"info": {
+		"_postman_id": "d18f8e7b-2228-4270-9014-580a24cf615f",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18247022"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Rajan\", \r\n    \"lastName\": \"Gautam\", \r\n    \"email\": \"gautamrajan@gmail.com\", \r\n    \"password\": \"rajangautam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/users/create",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Rajan\", \r\n    \"lastName\": \"Gautam\", \r\n    \"email\": \"gautamrajan@gmail.com\", \r\n    \"password\": \"rajangautam\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/users/create",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 07:40:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"CREATED\",\n    \"Success\": true,\n    \"Message\": \"User Created\",\n    \"Data\": {\n        \"user\": {\n            \"id\": \"00855e67-ea45-41e4-bfc6-6f6f104c180b\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$LU7Ipgz.sSwkwW5BMvAyfuXvDdmD/t4vIOK0YYRBQtxL8MVTfzmQK\",\n            \"transactions\": null\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjE2NzI0MjgsImV4cCI6MTY2MTg0NTIyOCwiaWQiOiIwMDg1NWU2Ny1lYTQ1LTQxZTQtYmZjNi02ZjZmMTA0YzE4MGIiLCJlbWFpbCI6ImdhdXRhbXJhamFuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlJhamFuIiwibGFzdE5hbWUiOiJHYXV0YW0ifQ.K1-KZ-8Avpy6HNKyTW1-ERTS-NP15fZR1-zMe6P7tcw\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Validate User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gautamrajan@gmail.com\", \r\n    \"password\": \"rajangautam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/users/validate",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"validate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validate User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gautamrajan@gmail.com\", \r\n    \"password\": \"rajangautam\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/users/validate",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"validate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 06:55:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"User Validated\",\n    \"Data\": {\n        \"user\": {\n            \"id\": \"7cd81885-4d08-4e6c-b7c0-9af37319ef44\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$EDIs.Xb8xteFf2iFJiEuG.3rfAY4znM6p7mHmX.YK037xAvAcMp6W\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjE2Njk3MjIsImV4cCI6MTY2MTY2OTg5NCwiaWQiOiIkMmEkMTIkRURJcy5YYjh4dGVGZjJpRkppRXVHLjNyZkFZNHpuTTZwN21IbVguWUswMzd4QXZBY01wNlciLCJlbWFpbCI6ImdhdXRhbXJhamFuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlJhamFuIiwibGFzdE5hbWUiOiJHYXV0YW0ifQ.rilUPblbfRrdFpFWEAJ6RyvUhvAzkPFenfFnye17XRY\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Entertainment\", \r\n    \"description\": \"Entertainment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/categories/create",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Entertainment\", \r\n    \"description\": \"Entertainment\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/categories/create",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:01:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"CREATED\",\n    \"Success\": true,\n    \"Message\": \"Category Created\",\n    \"Data\": {\n        \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n        \"title\": \"Entertainment\",\n        \"description\": \"Entertainment\",\n        \"totalExpense\": 0,\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"transactions\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Entertainment\",\r\n    \"description\": \"Entertainment description Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/categories/update/3688d18f-ddf0-4645-b3d4-878c643043aa",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"update",
+								"3688d18f-ddf0-4645-b3d4-878c643043aa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Entertainment\",\r\n    \"description\": \"Entertainment description Updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/categories/update/3688d18f-ddf0-4645-b3d4-878c643043aa",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"update",
+										"3688d18f-ddf0-4645-b3d4-878c643043aa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:02:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Category Updated\",\n    \"Data\": {\n        \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n        \"title\": \"Entertainment\",\n        \"description\": \"Entertainment description Updated\",\n        \"totalExpense\": 0,\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"transactions\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/categories/get-all",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"get-all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/categories/get-all",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"get-all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:02:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Categories Fetched\",\n    \"Data\": [\n        {\n            \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n            \"title\": \"Entertainment\",\n            \"description\": \"Entertainment description Updated\",\n            \"totalExpense\": 0,\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"transactions\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/categories/get-one/3688d18f-ddf0-4645-b3d4-878c643043aa",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"get-one",
+								"3688d18f-ddf0-4645-b3d4-878c643043aa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/categories/get-one/3688d18f-ddf0-4645-b3d4-878c643043aa",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"get-one",
+										"3688d18f-ddf0-4645-b3d4-878c643043aa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:02:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Category Fetched\",\n    \"Data\": {\n        \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n        \"title\": \"Entertainment\",\n        \"description\": \"Entertainment description Updated\",\n        \"totalExpense\": 0,\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"transactions\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/categories/delete-one/3688d18f-ddf0-4645-b3d4-878c643043aa",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"delete-one",
+								"3688d18f-ddf0-4645-b3d4-878c643043aa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/categories/delete-one/d28d5e88-7075-4544-b931-6a1fc34cabe8",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"delete-one",
+										"d28d5e88-7075-4544-b931-6a1fc34cabe8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 10:06:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Category Deleted\",\n    \"Data\": true\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 4561,\r\n    \"note\": \"This is for food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/transactions/create/c76d79e2-f986-4f17-80de-899b51ddd107",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"create",
+								"c76d79e2-f986-4f17-80de-899b51ddd107"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 4561,\r\n    \"note\": \"This is for food\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/transactions/create/3688d18f-ddf0-4645-b3d4-878c643043aa",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"create",
+										"3688d18f-ddf0-4645-b3d4-878c643043aa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:36:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"CREATED\",\n    \"Success\": true,\n    \"Message\": \"Transaction Created\",\n    \"Data\": {\n        \"transactionId\": \"366c0fec-3c75-49f7-861d-ecc2eeec893f\",\n        \"amount\": 4561,\n        \"note\": \"This is for food\",\n        \"date\": \"2022-08-28T12:36:31.819+00:00\",\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"category\": {\n            \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n            \"title\": \"Entertainment\",\n            \"description\": \"Entertainment description Updated\",\n            \"totalExpense\": 0,\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/transactions/get-one/08e157a4-2152-4214-8e8c-1d3aea7003e5",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"get-one",
+								"08e157a4-2152-4214-8e8c-1d3aea7003e5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single Transaction",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/transactions/get-one/08e157a4-2152-4214-8e8c-1d3aea7003e5",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"get-one",
+										"08e157a4-2152-4214-8e8c-1d3aea7003e5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:41:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Transaction Fetched\",\n    \"Data\": {\n        \"transactionId\": \"08e157a4-2152-4214-8e8c-1d3aea7003e5\",\n        \"amount\": 4561,\n        \"note\": \"This is for food\",\n        \"date\": \"2022-08-28T12:33:51.000+00:00\",\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"category\": {\n            \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n            \"title\": \"Entertainment\",\n            \"description\": \"Entertainment description Updated\",\n            \"totalExpense\": 0,\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User's Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/transactions/get/2c96aa55-69b7-40bc-9630-645f7de667ec",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"get",
+								"2c96aa55-69b7-40bc-9630-645f7de667ec"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User's Transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/transactions/get/2c96aa55-69b7-40bc-9630-645f7de667ec",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"get",
+										"2c96aa55-69b7-40bc-9630-645f7de667ec"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:50:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Transaction Fetched\",\n    \"Data\": [\n        {\n            \"transactionId\": \"08e157a4-2152-4214-8e8c-1d3aea7003e5\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:33:51.000+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        },\n        {\n            \"transactionId\": \"25b1555c-152f-47f8-8372-6694afc52141\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:25:04.880+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        },\n        {\n            \"transactionId\": \"366c0fec-3c75-49f7-861d-ecc2eeec893f\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:36:31.819+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        },\n        {\n            \"transactionId\": \"5775d731-f6b3-44ba-97b5-13ee6437050d\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:30:32.412+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        },\n        {\n            \"transactionId\": \"c8b37225-1343-4894-a719-df20f426857f\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:26:14.824+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        },\n        {\n            \"transactionId\": \"dd9d3cc4-f4fc-4f1d-9065-0a3463ef48bc\",\n            \"amount\": 4561,\n            \"note\": \"This is for food\",\n            \"date\": \"2022-08-28T12:24:11.857+00:00\",\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            },\n            \"category\": {\n                \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n                \"title\": \"Entertainment\",\n                \"description\": \"Entertainment description Updated\",\n                \"totalExpense\": 0,\n                \"user\": {\n                    \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                    \"firstName\": \"Rajan\",\n                    \"lastName\": \"Gautam\",\n                    \"email\": \"gautamrajan@gmail.com\",\n                    \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Transaction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 2400,\r\n    \"note\": \"This is for food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WALLET_URI}}/api/transactions/update/366c0fec-3c75-49f7-861d-ecc2eeec893f",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"update",
+								"366c0fec-3c75-49f7-861d-ecc2eeec893f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Transaction",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 2400,\r\n    \"note\": \"This is for food\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WALLET_URI}}/api/transactions/update/366c0fec-3c75-49f7-861d-ecc2eeec893f",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"update",
+										"366c0fec-3c75-49f7-861d-ecc2eeec893f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 12:57:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Transaction Updated\",\n    \"Data\": {\n        \"transactionId\": \"366c0fec-3c75-49f7-861d-ecc2eeec893f\",\n        \"amount\": 2400,\n        \"note\": \"This is for food\",\n        \"date\": \"2022-08-28T12:57:16.885+00:00\",\n        \"user\": {\n            \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n            \"firstName\": \"Rajan\",\n            \"lastName\": \"Gautam\",\n            \"email\": \"gautamrajan@gmail.com\",\n            \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n        },\n        \"category\": {\n            \"categoryId\": \"3688d18f-ddf0-4645-b3d4-878c643043aa\",\n            \"title\": \"Entertainment\",\n            \"description\": \"Entertainment description Updated\",\n            \"totalExpense\": 0,\n            \"user\": {\n                \"userId\": \"2c96aa55-69b7-40bc-9630-645f7de667ec\",\n                \"firstName\": \"Rajan\",\n                \"lastName\": \"Gautam\",\n                \"email\": \"gautamrajan@gmail.com\",\n                \"password\": \"$2a$12$nyCI/y6NOnYGy0ymB7FZsuTV5Li5yvuBRHKFq8fOjg0Nyj0G/8s4K\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WALLET_URI}}/api/transactions/delete/b12f053f-2387-46e2-a546-8c15bea602f2",
+							"host": [
+								"{{WALLET_URI}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"delete",
+								"b12f053f-2387-46e2-a546-8c15bea602f2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Transaction",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{WALLET_URI}}/api/transactions/delete/b12f053f-2387-46e2-a546-8c15bea602f2",
+									"host": [
+										"{{WALLET_URI}}"
+									],
+									"path": [
+										"api",
+										"transactions",
+										"delete",
+										"b12f053f-2387-46e2-a546-8c15bea602f2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Aug 2022 13:06:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Transaction Deleted\",\n    \"Data\": true\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjE2ODgwNzEsImV4cCI6MTY2MTg2MDg3MSwiaWQiOiIyYzk2YWE1NS02OWI3LTQwYmMtOTYzMC02NDVmN2RlNjY3ZWMiLCJlbWFpbCI6ImdhdXRhbXJhamFuQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlJhamFuIiwibGFzdE5hbWUiOiJHYXV0YW0ifQ.mAhKfdNcn2Kgn_dG29m1yXCobHnsvrtm74D73Qi1lQ8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "WALLET_URI",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}

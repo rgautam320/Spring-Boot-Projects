@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "3a6adaef-f00d-4652-ab72-f208517cb7cc",
+		"name": "Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18247022"
+	},
+	"item": [
+		{
+			"name": "Create Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"title\": \"Theory of Everything - Part II\", \r\n    \"description\": \"This is the description of Theory of Everything - Part II\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{COURSE_URI}}/course",
+					"host": [
+						"{{COURSE_URI}}"
+					],
+					"path": [
+						"course"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Course",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Theory of Everything\", \r\n    \"description\": \"This is the description of Theory of Everything\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COURSE_URI}}/course",
+							"host": [
+								"{{COURSE_URI}}"
+							],
+							"path": [
+								"course"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Aug 2022 10:20:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Course Created\",\n    \"Data\": {\n        \"id\": 1,\n        \"title\": \"Theory of Everything\",\n        \"description\": \"This is the description of Theory of Everything\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Single Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{COURSE_URI}}/courses/1",
+					"host": [
+						"{{COURSE_URI}}"
+					],
+					"path": [
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single Course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COURSE_URI}}/courses/1",
+							"host": [
+								"{{COURSE_URI}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Aug 2022 10:20:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Course Found\",\n    \"Data\": {\n        \"id\": 1,\n        \"title\": \"Theory of Everything\",\n        \"description\": \"This is the description of Theory of Everything\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{COURSE_URI}}/courses",
+					"host": [
+						"{{COURSE_URI}}"
+					],
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COURSE_URI}}/courses",
+							"host": [
+								"{{COURSE_URI}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Aug 2022 10:21:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Courses Found\",\n    \"Data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Theory of Everything\",\n            \"description\": \"This is the description of Theory of Everything\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Theory of Everything - Part II\",\n            \"description\": \"This is the description of Theory of Everything - Part II\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"Theory of Everything - II\", \r\n    \"description\": \"This is the description of Theory of Everything - II\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{COURSE_URI}}/courses/2",
+					"host": [
+						"{{COURSE_URI}}"
+					],
+					"path": [
+						"courses",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Course",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"Theory of Everything - II\", \r\n    \"description\": \"This is the description of Theory of Everything - II\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COURSE_URI}}/courses/2",
+							"host": [
+								"{{COURSE_URI}}"
+							],
+							"path": [
+								"courses",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Aug 2022 10:23:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Course Updated\",\n    \"Data\": {\n        \"id\": 2,\n        \"title\": \"Theory of Everything - II\",\n        \"description\": \"This is the description of Theory of Everything - II\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{COURSE_URI}}/courses/3",
+					"host": [
+						"{{COURSE_URI}}"
+					],
+					"path": [
+						"courses",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Course",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{COURSE_URI}}/courses/3",
+							"host": [
+								"{{COURSE_URI}}"
+							],
+							"path": [
+								"courses",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Aug 2022 10:24:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Course Deleted\",\n    \"Data\": true\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "COURSE_URI",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
