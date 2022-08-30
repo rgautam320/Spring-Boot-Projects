@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "14efa2d5-62ac-49ae-a83b-c5733fb07235",
+		"name": "Credo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18247022"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\": \"EMP03\",\r\n    \"mobileNumber\": \"123\",\r\n    \"employeeName\": \"Harish Giri\", \r\n    \"emailId\": \"harish.giri12@gmail.com\", \r\n    \"address\": {\r\n        \"line1\": \"House 12\", \r\n        \"line2\": \"Gokuldham Colony\", \r\n        \"landmark\": \"Andheri\",\r\n        \"city\": \"Mumbai\", \r\n        \"state\": \"Maharastra\", \r\n        \"pincode\": \"410023\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CREDO_URI}}/api/employee/create",
+					"host": [
+						"{{CREDO_URI}}"
+					],
+					"path": [
+						"api",
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"EMP01\",\r\n    \"mobileNumber\": \"123\",\r\n    \"employeeName\": \"Harish Giri\", \r\n    \"emailId\": \"harish.giri12@gmail.com\", \r\n    \"address\": {\r\n        \"line1\": \"House 12\", \r\n        \"line2\": \"Gokuldham Colony\", \r\n        \"landmark\": \"Andheri\",\r\n        \"city\": \"Mumbai\", \r\n        \"state\": \"Maharastra\", \r\n        \"pincode\": \"410023\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{CREDO_URI}}/api/employee/create",
+							"host": [
+								"{{CREDO_URI}}"
+							],
+							"path": [
+								"api",
+								"employee",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Aug 2022 12:12:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"CREATED\",\n    \"Success\": true,\n    \"Message\": \"Employee Created\",\n    \"Data\": {\n        \"employeeId\": \"EMP01\",\n        \"mobileNumber\": \"123\",\n        \"employeeName\": \"Harish Giri\",\n        \"emailId\": \"harish.giri12@gmail.com\",\n        \"address\": {\n            \"line1\": \"House 12\",\n            \"line2\": \"Gokuldham Colony\",\n            \"landmark\": \"Andheri\",\n            \"city\": \"Mumbai\",\n            \"state\": \"Maharastra\",\n            \"pincode\": \"410023\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{CREDO_URI}}/api/employee/get/EMP01",
+					"host": [
+						"{{CREDO_URI}}"
+					],
+					"path": [
+						"api",
+						"employee",
+						"get",
+						"EMP01"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employee",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{CREDO_URI}}/api/employee/get/EMP01",
+							"host": [
+								"{{CREDO_URI}}"
+							],
+							"path": [
+								"api",
+								"employee",
+								"get",
+								"EMP01"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Aug 2022 12:16:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Employee fetched\",\n    \"Data\": {\n        \"employeeId\": \"EMP01\",\n        \"mobileNumber\": \"123\",\n        \"employeeName\": \"Harish Giri\",\n        \"emailId\": \"harish.giri12@gmail.com\",\n        \"address\": {\n            \"line1\": \"House 12\",\n            \"line2\": \"Gokuldham Colony\",\n            \"landmark\": \"Andheri\",\n            \"city\": \"Mumbai\",\n            \"state\": \"Maharastra\",\n            \"pincode\": \"410023\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{CREDO_URI}}/api/employee/get-all",
+					"host": [
+						"{{CREDO_URI}}"
+					],
+					"path": [
+						"api",
+						"employee",
+						"get-all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{CREDO_URI}}/api/employee/get-all",
+							"host": [
+								"{{CREDO_URI}}"
+							],
+							"path": [
+								"api",
+								"employee",
+								"get-all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Aug 2022 12:25:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Employees fetched\",\n    \"Data\": [\n        {\n            \"employeeId\": \"EMP01\",\n            \"mobileNumber\": \"9845612546\",\n            \"employeeName\": \"Harish Giri\",\n            \"emailId\": \"harish.giri12@gmail.com\",\n            \"address\": {\n                \"line1\": \"House 12\",\n                \"line2\": \"Gokuldham Colony\",\n                \"landmark\": \"Andheri\",\n                \"city\": \"Mumbai\",\n                \"state\": \"Maharastra\",\n                \"pincode\": \"410023\"\n            }\n        },\n        {\n            \"employeeId\": \"EMP03\",\n            \"mobileNumber\": \"123\",\n            \"employeeName\": \"Harish Giri\",\n            \"emailId\": \"harish.giri12@gmail.com\",\n            \"address\": {\n                \"line1\": \"House 12\",\n                \"line2\": \"Gokuldham Colony\",\n                \"landmark\": \"Andheri\",\n                \"city\": \"Mumbai\",\n                \"state\": \"Maharastra\",\n                \"pincode\": \"410023\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileNumber\": \"9845612546\",\r\n    \"employeeName\": \"Harish Giri\", \r\n    \"emailId\": \"harish.giri12@gmail.com\", \r\n    \"address\": {\r\n        \"line1\": \"House 12\", \r\n        \"line2\": \"Gokuldham Colony\", \r\n        \"landmark\": \"Andheri\",\r\n        \"city\": \"Mumbai\", \r\n        \"state\": \"Maharastra\", \r\n        \"pincode\": \"410023\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CREDO_URI}}/api/employee/update/EMP01",
+					"host": [
+						"{{CREDO_URI}}"
+					],
+					"path": [
+						"api",
+						"employee",
+						"update",
+						"EMP01"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"9845612546\",\r\n    \"employeeName\": \"Harish Giri\", \r\n    \"emailId\": \"harish.giri12@gmail.com\", \r\n    \"address\": {\r\n        \"line1\": \"House 12\", \r\n        \"line2\": \"Gokuldham Colony\", \r\n        \"landmark\": \"Andheri\",\r\n        \"city\": \"Mumbai\", \r\n        \"state\": \"Maharastra\", \r\n        \"pincode\": \"410023\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{CREDO_URI}}/api/employee/update/EMP01",
+							"host": [
+								"{{CREDO_URI}}"
+							],
+							"path": [
+								"api",
+								"employee",
+								"update",
+								"EMP01"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Aug 2022 12:17:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Employee updated\",\n    \"Data\": {\n        \"employeeId\": \"EMP01\",\n        \"mobileNumber\": \"9845612546\",\n        \"employeeName\": \"Harish Giri\",\n        \"emailId\": \"harish.giri12@gmail.com\",\n        \"address\": {\n            \"line1\": \"House 12\",\n            \"line2\": \"Gokuldham Colony\",\n            \"landmark\": \"Andheri\",\n            \"city\": \"Mumbai\",\n            \"state\": \"Maharastra\",\n            \"pincode\": \"410023\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{CREDO_URI}}/api/employee/delete/EMP02",
+					"host": [
+						"{{CREDO_URI}}"
+					],
+					"path": [
+						"api",
+						"employee",
+						"delete",
+						"EMP02"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{CREDO_URI}}/api/employee/delete/EMP02",
+							"host": [
+								"{{CREDO_URI}}"
+							],
+							"path": [
+								"api",
+								"employee",
+								"delete",
+								"EMP02"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Aug 2022 12:25:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"Success\": true,\n    \"Message\": \"Employee deleted\",\n    \"Data\": true\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CREDO_URI",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
