@@ -17,16 +17,13 @@ public class Question {
     private String answer;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Quiz quiz;
-
-    @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
 
     public Question() {
     }
 
     public Question(String questionId, String content, String option1, String option2, String option3, String option4,
-            String answer, Quiz quiz, Category category) {
+            String answer, Category category) {
         this.questionId = questionId;
         this.content = content;
         this.option1 = option1;
@@ -34,7 +31,6 @@ public class Question {
         this.option3 = option3;
         this.option4 = option4;
         this.answer = answer;
-        this.quiz = quiz;
         this.category = category;
     }
 
@@ -92,14 +88,6 @@ public class Question {
 
     public void setAnswer(String answer) {
         this.answer = answer;
-    }
-
-    public Quiz getQuiz() {
-        return quiz;
-    }
-
-    public void setQuiz(Quiz quiz) {
-        this.quiz = quiz;
     }
 
     public Category getCategory() {

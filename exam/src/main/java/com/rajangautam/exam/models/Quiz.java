@@ -1,15 +1,9 @@
 package com.rajangautam.exam.models;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Quiz {
@@ -24,10 +18,6 @@ public class Quiz {
     @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
 
-    @OneToMany(mappedBy = "quiz", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonIgnore
-    private List<Question> questions;
-
     @ManyToOne(fetch = FetchType.EAGER)
     private User user;
 
@@ -35,7 +25,7 @@ public class Quiz {
     }
 
     public Quiz(String quizId, String title, String description, int maxMarks, int noOfQuestions, boolean active,
-            Category category, List<Question> questions, User user) {
+            Category category, User user) {
         this.quizId = quizId;
         this.title = title;
         this.description = description;
@@ -43,7 +33,6 @@ public class Quiz {
         this.noOfQuestions = noOfQuestions;
         this.active = active;
         this.category = category;
-        this.questions = questions;
         this.user = user;
     }
 
@@ -101,14 +90,6 @@ public class Quiz {
 
     public void setCategory(Category category) {
         this.category = category;
-    }
-
-    public List<Question> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<Question> questions) {
-        this.questions = questions;
     }
 
     public User getUser() {
